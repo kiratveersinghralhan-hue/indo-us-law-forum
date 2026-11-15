@@ -13,11 +13,11 @@ export const siteCopy = {
     changeLater: 'Change your choice at any time using Experience settings in the footer.',
   },
   hero: {
-    eyebrow: 'India–US · Disputes · Transactions',
+    eyebrow: 'India-US Cross Border Law · Disputes · Transactions',
     lines: ['Research across', 'borders.', 'Ideas in dialogue.'],
     introduction:
-      'A research wing of student researchers exploring India–US cross-border disputes and transactions. Read our work and contribute to the conversation.',
-    caption: 'Indo-US Law Forum / Sample edition',
+      'An independent research publication examining India–US cross-border disputes, corporate transactions, and regulatory frameworks. Read our work and contribute to the dialogue.',
+    caption: 'The Corridor / Sample edition',
   },
   focus: {
     eyebrow: '01 / Fields of inquiry',
@@ -48,31 +48,58 @@ export const siteCopy = {
       'Keep sources, limitations and interpretation together.',
     ],
   },
+  about: {
+    eyebrow: 'About The Corridor / Institutional mandate',
+    title: 'Bridging two legal traditions.',
+    italic: 'Rigorous cross-border inquiry.',
+    lead: 'The Corridor is a dedicated forum for India–US cross-border legal scholarship, tracking how courts, arbitral tribunals, regulators, and corporate counsel navigate commercial activity between the two jurisdictions.',
+    body: 'Structured for practitioners, scholars, and student researchers, the publication pairs doctrinal analysis with an indexed repository of cross-border disputes and transactional developments. Final institutional overview and founding note from the editorial board will be inserted here upon client sign-off.',
+    pillars: [
+      {
+        index: 'I',
+        title: 'Bilateral focus',
+        detail:
+          'Dedicated coverage of legal, regulatory, and arbitral developments connecting Indian and United States commercial jurisdictions.',
+      },
+      {
+        index: 'II',
+        title: 'Primary-source discipline',
+        detail:
+          'Every published note and case record separates primary filings and statutory text from editorial commentary.',
+      },
+      {
+        index: 'III',
+        title: 'Editorial review',
+        detail:
+          'Contributions undergo structured editorial review for doctrinal accuracy, citation completeness, and comparative clarity.',
+      },
+    ],
+  },
   teamPreview: {
     eyebrow: '04 / People & perspectives',
-    title: 'The people behind the questions.',
+    title: 'The editorial board & researchers.',
     description:
-      'A place for the future editorial team. These neutral studies stand in for approved names, biographies and portraits.',
+      'Structured editorial profiles ready for approved portraits, institutional titles, and biographical writeups.',
   },
   contribution: {
     eyebrow: 'An invitation, in preparation',
     title: 'Bring another',
     italic: 'perspective.',
     description:
-      'We publish work by in-house student researchers and welcome contributions from other students. Guidelines and the private review workflow are being prepared.',
+      'We publish work by our editorial researchers and welcome contributions examining India–US cross-border law. Guidelines and the private review workflow are being prepared.',
   },
   articles: {
     eyebrow: 'The reading room / Sample edition',
     title: 'Articles',
     introduction:
-      'Student research on India–US cross-border disputes and transactions. Explore the four research areas; all current articles are clearly labelled layout samples.',
+      'Research and commentary on India–US cross-border disputes and transactions. Explore the four research areas; all current articles are clearly labelled layout samples.',
   },
   team: {
-    eyebrow: 'People & perspectives',
+    eyebrow: 'About & Editorial Board · India-US Cross Border Law',
     title: 'The team',
     introduction:
-      'A space for the people who will shape the work. Names, roles, biographies and portraits remain provisional.',
-    note: 'No real team identities are represented here. Neutral avatar artwork is a placeholder.',
+      'Meet the editors and researchers behind The Corridor. Member photographs and biographical writeups are structured below for direct insertion upon final client confirmation.',
+    note: 'No real team identities are represented here yet. Portrait frames and biographical slots are prepared for final team photos and writeups.',
   },
   cases: {
     eyebrow: 'Knowledge repository / Sample records',
@@ -84,7 +111,7 @@ export const siteCopy = {
     eyebrow: 'Contribute / Form preview',
     title: 'Submit an article',
     introduction:
-      'Contributions from students are welcome. PDF and Word versions are requested; submission guidelines and the double-blind review workflow await confirmation. Live intake remains disabled.',
+      'Contributions on India–US cross-border law are welcome. PDF and Word versions are requested; submission guidelines and the double-blind review workflow await confirmation. Live intake remains disabled.',
     notice: 'Prototype — submissions are not sent',
     instructions:
       'Use fictional sample text only. Do not enter names, emails, contact details or other personal information.',
@@ -97,12 +124,12 @@ export const siteCopy = {
     ],
   },
   footer: {
-    eyebrow: 'An edition in preparation',
+    eyebrow: 'The Corridor · India-US Cross Border Law',
     lineOne: 'Space for research.',
     lineTwo: 'Room for perspective.',
     description:
-      'Indo-US Law Forum brings student research to India–US cross-border disputes and transactions. Approved articles, team profiles and contact information are pending.',
+      'The Corridor brings rigorous research and analysis to India–US cross-border disputes and transactions. Approved articles, editorial board profiles and contact information are being prepared.',
   },
   sampleNotice:
-    'Demonstration content. Articles, profiles and repository records are fictional; the organization and four research areas are confirmed. Approved publication content is pending.',
+    'Demonstration content. Articles, profiles and repository records are fictional; the publication identity and four research areas are confirmed. Approved publication content is pending.',
 } as const;

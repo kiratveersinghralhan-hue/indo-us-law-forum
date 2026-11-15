@@ -66,6 +66,7 @@ export function createPublicationServer(options: {
       if (
         path.startsWith('/assets/') ||
         path.startsWith('/artwork/') ||
+        path.startsWith('/brand/') ||
         path.startsWith('/fonts/') ||
         path === '/favicon.svg'
       ) {

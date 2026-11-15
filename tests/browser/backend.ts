@@ -1516,7 +1516,7 @@ test.describe('security headers:', () => {
       page.getByRole('heading', { name: 'Staff sign-in' }),
     ).toBeVisible();
     await page
-      .getByRole('link', { name: 'Indo-US Law Forum — Home', exact: true })
+      .getByRole('link', { name: 'The Corridor — Home', exact: true })
       .click();
     await expect(page.locator('.publication-caption')).toContainText(
       'CSP TEST ONLY',

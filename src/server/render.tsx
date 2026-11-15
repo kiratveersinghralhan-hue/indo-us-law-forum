@@ -63,7 +63,7 @@ export async function renderPublic(
   const provider = environment.publicProvider;
   const seed: Record<string, unknown> = {};
   let status = 200,
-    title = 'Student research on India–US law',
+    title = 'India-US Cross Border Law',
     description = defaultDescription;
   let imagePath: string | undefined;
   const categories = await provider.listCategories();

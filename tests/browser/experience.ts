@@ -132,7 +132,7 @@ for (const width of [390, 768, 1440]) {
       await expect(dialog).toHaveCount(0);
       await page
         .getByRole('link', {
-          name: 'Indo-US Law Forum — Home',
+          name: 'The Corridor — Home',
           exact: true,
         })
         .click();

@@ -29,6 +29,7 @@ import { useEditorialMotion } from '../motion/use-editorial-motion';
 import { motionSettings } from '../config/motion';
 import { usePublicSite } from '../data/site-context';
 import { featuredArticles } from '../data/article-presentation';
+import { sampleTeam } from '../data/mock-data';
 import { useDemoEnvironment } from '../admin/context';
 
 export function HomePage() {
@@ -50,7 +51,7 @@ export function HomePage() {
     JSON.stringify(settings.sections),
   );
   useEffect(() => {
-    setPageMetadata('Student research on India–US law');
+    setPageMetadata('India-US Cross Border Law');
   }, []);
   const sections =
     state.status === 'ready'
@@ -110,7 +111,7 @@ export function HomePage() {
                   </div>
                   <p>
                     {live
-                      ? 'Selected published research from Indo-US Law Forum. Articles appear after editorial approval.'
+                      ? 'Selected published research from The Corridor. Articles appear after editorial approval.'
                       : siteCopy.featured.description}
                   </p>
                 </div>
@@ -224,6 +225,35 @@ export function HomePage() {
               className="section container team-preview"
               aria-labelledby="team-preview-heading"
             >
+              <div className="about-home-card" data-reveal>
+                <div className="about-home-header">
+                  <img
+                    src={brand.logo}
+                    alt=""
+                    aria-hidden="true"
+                    className="about-home-logo"
+                    width={56}
+                    height={56}
+                  />
+                  <div>
+                    <p className="eyebrow">{siteCopy.about.eyebrow}</p>
+                    <h3>
+                      {siteCopy.about.title}{' '}
+                      <em>{siteCopy.about.italic}</em>
+                    </h3>
+                  </div>
+                </div>
+                <p className="about-home-lead">{siteCopy.about.lead}</p>
+                <div className="about-pillars">
+                  {siteCopy.about.pillars.map((pillar) => (
+                    <div key={pillar.index} className="about-pillar">
+                      <span className="about-pillar-index">{pillar.index}</span>
+                      <strong>{pillar.title}</strong>
+                      <p>{pillar.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
               <div className="section-heading" data-reveal>
                 <div>
                   <p className="eyebrow">{siteCopy.teamPreview.eyebrow}</p>
@@ -238,14 +268,24 @@ export function HomePage() {
                 </p>
               </div>
               <div className="team-preview-grid" data-reveal>
-                {state.data.team.slice(0, 3).map((profile) => (
-                  <TeamCard key={profile.id} profile={profile} compact />
-                ))}
+                {(state.data.team.length ? state.data.team : sampleTeam)
+                  .slice(0, 3)
+                  .map((profile) => (
+                    <TeamCard
+                      key={profile.id}
+                      profile={
+                        state.data.team.length
+                          ? profile
+                          : { ...profile, fictional: true }
+                      }
+                      compact
+                    />
+                  ))}
               </div>
               {!state.data.team.length && (
                 <EmptyState
                   title="Team profiles are awaiting content."
-                  description="Team profiles will appear here after approval."
+                  description="Temporary placeholder profiles are shown above for layout review. Approved team portraits and biographies will replace them upon publication."
                 />
               )}
               <TextLink to={paths.team}>
@@ -296,7 +336,7 @@ export function HomePage() {
             {motionSettings.entranceEnabled && (
               <p className="entrance-label">
                 {brand.name} <span aria-hidden="true">/</span>{' '}
-                {live ? 'Student research' : 'Sample edition'}
+                {live ? brand.descriptor : 'Sample edition'}
               </p>
             )}
             <p className="eyebrow accent-rule">{settings.hero.eyebrow}</p>
@@ -337,7 +377,7 @@ export function HomePage() {
           />
           <div className="hero-bottom">
             <span>
-              Indo-US Law Forum / {live ? 'Student research' : 'Sample edition'}
+              {brand.name} / {live ? brand.descriptor : 'Sample edition'}
             </span>
             <a
               href={

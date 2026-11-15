@@ -1,8 +1,8 @@
-# Indo-US Law Forum
+# The Corridor — India-US Cross Border Law
 
 **Architectural Editorial Platform — India–US Cross-Border Legal Research & Publishing**
 
-Indo-US Law Forum is a student-led legal research and publishing platform focused on India–US cross-border disputes, insolvency, M&A/foreign investment regulation, and regulatory enforcement.
+**The Corridor** (*India-US Cross Border Law*) is a legal research and publishing platform focused on India–US cross-border disputes, insolvency, M&A/foreign investment regulation, and regulatory enforcement.
 
 The frontend implements the **Architectural Editorial (The Stele V2 / The Corridor)** design direction: a disciplined navy, muted slate-blue, and crisp white editorial aesthetic paired with locally hosted **Source Serif 4** and **Public Sans** typography, a skippable ~2.05-second opening sequence, a single-canvas 3D publication sculpture with automatic static SVG/CSS fallback, a 360-degree interactive `ResearchCarousel`, and a selectively glassmorphic staff administration workspace.
 

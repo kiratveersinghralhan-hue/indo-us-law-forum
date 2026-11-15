@@ -48,7 +48,7 @@ export function ArticlesPage() {
       >
         <p>
           {live
-            ? 'Student research on India–US cross-border disputes and transactions. Published articles will appear here after editorial approval.'
+            ? 'Research on India–US cross-border disputes and transactions. Published articles will appear here after editorial approval.'
             : siteCopy.articles.introduction}
         </p>
       </PageIntro>

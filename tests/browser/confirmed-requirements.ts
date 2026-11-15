@@ -18,7 +18,10 @@ for (const width of [390, 768, 1440]) {
         sessionStorage.setItem('editorial-intro-seen', '1');
       });
       await page.goto('/');
-      await expect(page.locator('.brand')).toContainText('Indo-US Law Forum');
+      await expect(page.locator('.brand')).toContainText('The Corridor');
+      await expect(page.locator('.brand')).toContainText(
+        'India-US Cross Border Law',
+      );
       await expect(page.locator('.focus-row')).toHaveCount(4);
       await expect(page.locator('.hero-actions a')).toHaveText([
         'Read articles→',
@@ -44,7 +47,7 @@ for (const width of [390, 768, 1440]) {
         await expect(page.locator('.sample-notice')).toContainText(
           'Fictional article',
         );
-        await expect(page).toHaveTitle(/Indo-US Law Forum/);
+        await expect(page).toHaveTitle(/The Corridor/);
         await expect(
           page.locator('meta[property="og:description"]'),
         ).toHaveAttribute('content', /No legal findings/);
@@ -59,7 +62,7 @@ for (const width of [390, 768, 1440]) {
         page.locator('#categoryId option[value="institutions"]'),
       ).toContainText('mapping pending');
       await expect(page.locator('.admin-header')).toContainText(
-        'Indo-US Law Forum',
+        'The Corridor',
       );
       await page.goto('/submit');
       if (width === 1440)

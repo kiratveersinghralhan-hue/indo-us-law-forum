@@ -100,7 +100,7 @@ export function SampleNotice({ children }: { children?: ReactNode }) {
       <span>
         {children ??
           (env?.backend
-            ? 'Indo-US Law Forum. Backend records require editorial approval before publication; final logo and contact information are pending.'
+            ? 'The Corridor · India-US Cross Border Law. Backend records require editorial approval before publication; final team portraits and contact details are pending.'
             : siteCopy.sampleNotice)}
       </span>
     </aside>

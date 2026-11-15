@@ -43,7 +43,7 @@ export function EditorialArtwork({
         alt={
           asset?.coverAlt ||
           (asset?.fictional === false
-            ? 'Indo-US Law Forum — cover artwork pending'
+            ? 'The Corridor — cover artwork pending'
             : media.alt)
         }
         width={artwork === 'avatar' ? 800 : 1000}

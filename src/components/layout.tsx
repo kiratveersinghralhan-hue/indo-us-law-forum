@@ -126,6 +126,14 @@ function Header() {
           className="brand"
           aria-label={`${brand.name} — Home`}
         >
+          <img
+            src={brand.logo}
+            alt=""
+            aria-hidden="true"
+            className="brand-logo"
+            width={44}
+            height={44}
+          />
           <span>
             {brand.name}
             <small>{brand.descriptor}</small>
@@ -196,6 +204,20 @@ function Footer() {
       <div className="container">
         <div className="footer-top">
           <div>
+            <div className="footer-brand-lockup">
+              <img
+                src={brand.logo}
+                alt=""
+                aria-hidden="true"
+                className="footer-brand-logo"
+                width={52}
+                height={52}
+              />
+              <div>
+                <strong className="footer-brand-name">{brand.name}</strong>
+                <span className="footer-brand-descriptor">{brand.descriptor}</span>
+              </div>
+            </div>
             <p className="eyebrow">{siteCopy.footer.eyebrow}</p>
             <p className="footer-statement">
               {siteCopy.footer.lineOne}
@@ -312,7 +334,7 @@ export function Layout() {
       </a>
       <EditorialIntroGate />
       <div className="prototype-banner">
-        {live ? `${brand.name} / Student research` : brand.prototypeNotice}
+        {live ? `${brand.name} · ${brand.descriptor}` : brand.prototypeNotice}
       </div>
       <Header key={location.pathname} />
       <main ref={main} id="main-content" tabIndex={-1}>

@@ -1,7 +1,7 @@
 import { brand } from './brand';
 
 export const defaultDescription =
-  'Indo-US Law Forum is a research wing of student researchers exploring India–US cross-border disputes and transactions, with articles and student contributions.';
+  'The Corridor — India-US Cross Border Law: an editorial research publication examining India–US cross-border disputes, transactions, and regulatory frameworks.';
 export function setPageMetadata(
   title: string,
   description = defaultDescription,

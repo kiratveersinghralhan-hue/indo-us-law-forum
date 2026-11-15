@@ -167,12 +167,12 @@ export function StaffLogin({ recovery = false }: { recovery?: boolean }) {
           </div>
           <div className="staff-auth-cover staff-auth-cover-front">
             <span className="staff-auth-cover-kicker">
-              Student research · India–US
+              {brand.descriptor}
             </span>
             <strong>
-              Indo-US
+              The
               <br />
-              Law Forum
+              Corridor.
             </strong>
             <img src={editorialMedia.institutions.src} alt="" />
             <span className="staff-auth-cover-footer">
@@ -182,7 +182,7 @@ export function StaffLogin({ recovery = false }: { recovery?: boolean }) {
         </div>
         <div className="staff-auth-composition-footer">
           <span>Ideas, with context.</span>
-          <span>Indo-US Law Forum / Staff</span>
+          <span>{brand.name} / Staff</span>
         </div>
       </div>
       <div className="staff-auth-form-panel">

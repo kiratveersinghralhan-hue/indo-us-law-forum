@@ -67,7 +67,7 @@ function EditorialIntro() {
       <div className="intro-edition" aria-hidden="true">
         <span className="intro-stele" />
         <span className="intro-fine-line" />
-        <p className="eyebrow">Student research · India–US</p>
+        <p className="eyebrow">{brand.descriptor}</p>
         <div className="intro-type-mask">
           <p className="intro-identity">{brand.name}</p>
         </div>

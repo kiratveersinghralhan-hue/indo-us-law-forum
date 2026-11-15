@@ -1,6 +1,7 @@
 export const brand = {
-  name: 'Indo-US Law Forum',
-  descriptor: 'Student research · India–US',
-  prototypeNotice: 'Indo-US Law Forum / Sample research',
-  titleSuffix: 'Indo-US Law Forum',
+  name: 'The Corridor',
+  descriptor: 'India-US Cross Border Law',
+  prototypeNotice: 'The Corridor · India-US Cross Border Law',
+  titleSuffix: 'The Corridor',
+  logo: '/brand/the-corridor-logo.jpg',
 } as const;

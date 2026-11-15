@@ -247,24 +247,24 @@ export const sampleTeam: TeamProfile[] = [
     id: 'a',
     artwork: 'avatar',
     label: 'Sample profile A',
-    role: 'Editorial role — pending',
+    role: 'Founding Editor · India-US Cross Border Law',
     description:
-      'Placeholder for an approved biography and editorial responsibilities.',
+      'Reserved for founding editor portrait and biographical writeup (academic affiliation, cross-border focus, and editorial mandate).',
   },
   {
     id: 'b',
     artwork: 'avatar',
     label: 'Sample profile B',
-    role: 'Research role — pending',
+    role: 'Managing Editor · Disputes & Arbitration',
     description:
-      'Placeholder for an approved biography and research interests.',
+      'Reserved for managing editor portrait and biographical writeup (international arbitration, enforcement, and bilateral litigation research).',
   },
   {
     id: 'c',
     artwork: 'avatar',
     label: 'Sample profile C',
-    role: 'Contributor role — pending',
+    role: 'Senior Research Fellow · Corporate & Transactions',
     description:
-      'Placeholder for an approved biography and contribution details.',
+      'Reserved for senior research fellow portrait and biographical writeup (cross-border M&A, securities regulation, and technology governance).',
   },
 ];

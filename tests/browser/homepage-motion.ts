@@ -211,7 +211,7 @@ for (const width of widths) {
         await expect(page.locator(canvas)).toHaveCount(0);
         await page
           .getByRole('link', {
-            name: 'Indo-US Law Forum — Home',
+            name: 'The Corridor — Home',
             exact: true,
           })
           .click();
