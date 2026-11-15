@@ -84,7 +84,7 @@ it('keeps the proposed service free/manual and uses the guarded SSR commands wit
   const manifest = readFileSync('render.yaml', 'utf8');
   expect(manifest).toMatch(/plan: free/);
   expect(manifest).toMatch(/autoDeployTrigger: 'off'/);
-  expect(manifest).toMatch(/branch: master/);
+  expect(manifest).toMatch(/branch: main/);
   expect(manifest).toMatch(/npm ci --include=dev && npm run build:review/);
   expect(manifest).toMatch(/startCommand: npm run start:review/);
   expect(manifest).toMatch(/key: SITE_INDEXABLE\s+value: "false"/);

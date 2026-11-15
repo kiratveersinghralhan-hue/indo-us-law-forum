@@ -6,7 +6,7 @@ services:
     runtime: node
     plan: free
     region: singapore
-    branch: master
+    branch: main
     autoDeployTrigger: 'off'
     buildCommand: npm ci --include=dev && npm run build:review
     startCommand: npm run start:review
