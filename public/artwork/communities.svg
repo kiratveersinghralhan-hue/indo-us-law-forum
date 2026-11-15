@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#fff" stroke-opacity=".09"/></pattern><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#12213e" stroke-opacity=".22"/></pattern></defs><rect width="1000" height="800" fill="#dfe2e9"/><path d="M0 0H1000V180H0Z" fill="#102b52"/><circle cx="810" cy="177" r="104" fill="#3969c7"/>
+<path d="M0 690L1000 365V800H0Z" fill="#b1bacd"/><path d="M60 570L500 358L940 550L500 774Z" fill="#eaecf1"/>
+<path d="M166 540V330A134 134 0 0 1 434 330V560H365V330A65 65 0 0 0 235 330V540Z" fill="#315cb0"/><path d="M166 540L210 563V350A134 134 0 0 1 434 260A134 134 0 0 0 166 330Z" fill="#102b52"/>
+<path d="M485 616V400A126 126 0 0 1 737 400V616H672V400A61 61 0 0 0 550 400V616Z" fill="#102b52"/><path d="M737 400L778 421V637L737 616Z" fill="#406fc9"/>
+<path d="M90 630L500 430L910 610" fill="none" stroke="#3969c7" stroke-width="3"/>
+<circle cx="420" cy="590" r="45" fill="#3969c7"/><circle cx="806" cy="565" r="28" fill="#102b52"/><path d="M45 735H945" stroke="#102b52"/></svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#fff" stroke-opacity=".09"/></pattern><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#12213e" stroke-opacity=".22"/></pattern></defs><rect width="1000" height="800" fill="#1e386b"/><rect width="1000" height="800" fill="url(#grid)"/><circle cx="770" cy="180" r="110" fill="#d7dce4"/>
+<path d="M85 650L430 475L900 650L550 790Z" fill="#102b52"/>
+<path d="M170 612V300L390 188V502Z" fill="#eaecf1"/><path d="M390 188L490 230V545L390 502Z" fill="#b3bdcf"/>
+<path d="M492 655V366L695 263V553Z" fill="#e3e6ec"/><path d="M695 263L795 307V598L695 553Z" fill="#8392b0"/>
+<path d="M195 572V329L364 243V489Z" fill="url(#hatch)"/><path d="M518 608V394L670 317V532Z" fill="url(#hatch)"/>
+<path d="M90 703L880 307M120 744L910 348" stroke="#b7c0d1" stroke-width="2"/>
+<g fill="#12213e"><path d="M225 560V364L255 349V545Z"/><path d="M286 528V334L316 319V513Z"/><path d="M550 577V417L580 402V562Z"/><path d="M611 546V386L641 371V531Z"/></g></svg>

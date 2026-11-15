@@ -1,0 +1,35 @@
+# Hosting and SEO decision
+
+> Local chronology update — 17 October 2026: The controlled local promotion is complete. Client/SSR validation receipts and relocation smoke evidence are local proof only. The 12 October hosted observations and earlier strategy records below remain historical; no current hosted verification, Render configuration change, domain decision, indexing approval or deployment is implied. Production content, host/proxy acceptance and the other external dependencies below remain unresolved.
+
+**12 October hosted review:** https://indo-us-law-forum-review.onrender.com is live on Free Render Node/SSR from `f290c0f`, with service Auto-Deploy Off and Blueprint Auto Sync No. Hobby/no card/$0.00 was verified. Eighteen real HTTP probes, HTTPS redirect, noindex/security/cache headers, 390/768/1440px layouts and real staff login/reload passed. One natural cold wake returned successfully. HSTS is absent; published detail/cover/carousel acceptance, private Storage, recovery, repeatable startup timing and cross-browser/device checks remain pending. [Exact evidence and limitations](hosted-review.md). This is not production-host/domain or indexing approval; older alternatives below remain historical.
+
+**Current implementation:** [the signed-image/HTML report](remaining-work-implementation.md) supersedes the earlier missing-renderer findings below. `npm run build:rendered` builds the existing browser app plus a portable SSR entry; `npm run preview:rendered` serves it locally on 5190. Raw public HTML, metadata, paginated sitemap, stable anonymous image delivery and genuine 404/503 status handling are implemented. HTML/sitemap/media use fresh public reads and no-store, defining the update path without webhooks or rebuilds. Admin/auth HTML is shell-only/noindex/no-store. The approved Free review deployment uses `build:review`/`start:review` and enforces noindex. Production host/proxy, approved canonical/share content, recovery redirects, HSTS, indexing and load verification remain pending.
+
+The following is the earlier strategy/decision record. Its descriptions of missing local rendering are superseded; its constraints on static-only hosting, private data, crawler output and future cache invalidation still apply. Provider examples are options, not a selected host.
+
+**10 October follow-up audit:** the dedicated backend is connected and its reviewed migrations are applied, while hosting remains undecided. The production build passes; raw local-preview requests still return a noindex SPA shell, including HTTP 200 for missing article/case slugs. No canonical, sitemap or rendering/revalidation adapter exists yet. See [the current handover audit](developer-client-handover.md#build-hosting-and-seo-audit) and [completion checklist](completion-checklist.md). Real backend verification does not complete hosting/SEO readiness.
+
+Google visibility and searchable individual articles/social previews are confirmed priorities for Indo-US Law Forum. Organization titles/descriptions and browser-updated article summaries/Open Graph text are implemented locally. They do not supply server-rendered detail HTML. No domain, canonical, sitemap or official share image is invented. Prototype `noindex,nofollow` remains while samples/unverified backend controls are present. Visitor analytics remains disconnected pending provider/privacy decisions; editorial counts are not visits.
+
+No hosting strategy has been selected, no deployment configuration activated and nothing deployed. Current Vite root/history routing and `noindex,nofollow` remain intentional local defaults.
+
+## Recommended direction to approve
+
+Use a host with clean URL rewrites **and server rendering or publish-triggered prerendering**, such as Cloudflare Pages/Workers with a reviewed rendering/revalidation layer. Preserve existing React layouts, motion and providers. A plain SPA upload to any host is insufficient for reliable article-specific social previews; client-side title changes alone do not provide crawler-visible metadata. This recommendation is an architecture inference, not a hosting purchase or migration.
+
+On selection, configure the host/base/canonical origin together. Serve real HTML for `/articles/:slug` and `/cases/:slug`, with title, summary description, canonical URL, approved image/alt and Open Graph/Twitter tags. Escape all values; fetch only public published data. Generate sitemap entries from published records and approved dates, excluding admin, recovery, submission responses and drafts. Return actual HTTP 404 for unknown/unpublished slugs. Public pages must refresh directly without losing routes. Keep all admin/auth responses private/no-store and noindex.
+
+Publishing, unpublishing, deletes, slug changes and updated homepage/featured selections must invalidate/regenerate the affected pages, collection pages, sitemap and metadata. Choose a server-side authenticated event/rebuild mechanism; never expose deployment tokens to the browser. A future publish action must surface invalidation failure rather than claim that all cached public pages updated. Signed editorial asset URLs expire, so prerendered metadata needs stable public approved share images or a controlled public-image route; never embed expiring private URLs into a permanent OG tag.
+
+## GitHub Pages evaluation
+
+[GitHub Pages is a static host](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). It does not run a request-time renderer for database-backed content. Clean history deep links need generated route files or a carefully tested fallback. Hash routing can load the application but weakens clean article URLs and does not solve social metadata. A JavaScript 404 workaround still starts with an HTTP 404 and is not the desired SEO strategy.
+
+Pages can support **prebuilt article/case HTML**, metadata and sitemap if every publish/unpublish triggers a trusted rebuild and static assets remain available. That introduces a rebuild pipeline, delay/failure handling and cache coordination alongside the CMS. Before choosing it, confirm those limits are acceptable. Do not assume every database save updates an already-built page.
+
+[Cloudflare Pages supports SPA routing conventions](https://developers.cloudflare.com/pages/configuration/serving-pages/), and [Functions routes have distinct redirect handling](https://developers.cloudflare.com/pages/configuration/redirects/). Rewrites alone still do not implement SEO rendering. After the client chooses a host, prepare its route/HTTP404/security-header config and selected prerender/SSR build adapter, then test anonymous HTML/share crawlers, sitemap freshness and direct URL refreshes before deployment.
+
+## Required decision
+
+Approve hosting choice and rendering/update approach, domain/canonical origin, indexing/share-image content and deployment authority. No host-specific configuration or deployment secret was added while this decision is pending. SSR/prerender implementation and hosted verification remain launch blockers; the current frontend build is not a completed SEO deployment.

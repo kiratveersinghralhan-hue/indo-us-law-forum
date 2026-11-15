@@ -1,0 +1,23 @@
+-- No persistent fixtures. The dedicated runner captures every TAP assertion.
+begin;
+create extension if not exists pgtap with schema extensions;
+set search_path = public, extensions;
+select no_plan();
+select ok(not has_function_privilege('anon','public.staff_role()','execute'),'Anonymous cannot invoke staff role RPC');
+select ok(not has_function_privilege('anon','public.review_submission(uuid,text)','execute'),'Anonymous review RPC grant removed');
+select ok(not has_function_privilege('anon','public.convert_submission(uuid)','execute'),'Anonymous conversion RPC grant removed');
+select ok(not has_function_privilege('anon','public.save_homepage(jsonb)','execute'),'Anonymous settings RPC grant removed');
+select ok(not has_function_privilege('anon','public.reorder_content(text,uuid[])','execute'),'Anonymous ordering RPC grant removed');
+select ok(not has_function_privilege('anon','public.dashboard_counts()','execute'),'Anonymous dashboard RPC grant removed');
+select ok(has_function_privilege('authenticated','public.review_submission(uuid,text)','execute'),'Authenticated review retains internal staff guard');
+select ok(has_function_privilege('authenticated','public.save_homepage(jsonb)','execute'),'Staff settings operation remains callable');
+select ok(has_function_privilege('anon','public.intake_enabled()','execute'),'Intake boolean intentionally readable');
+select ok(has_function_privilege('anon','public.backend_project_marker()','execute'),'Non-secret identity marker readable');
+select ok(not has_function_privilege('authenticated','public.accept_submission(uuid,uuid,uuid,text,jsonb,text)','execute'),'Intake remains service only');
+select ok(not has_function_privilege('anon','private.record_activity()','execute'),'Internal trigger cannot be invoked externally');
+select is((select count(*)::integer from pg_class c join pg_namespace n on n.oid=c.relnamespace where n.nspname in ('public','private') and c.relkind='r' and not c.relrowsecurity),0,'Every application table has RLS');
+create function public.verification_default_privileges() returns boolean language sql as $$select true$$;
+select ok(not has_function_privilege('anon','public.verification_default_privileges()','execute'),'Future functions have no default anonymous execute');
+select ok(not has_function_privilege('authenticated','public.verification_default_privileges()','execute'),'Future functions require explicit authenticated grant');
+select * from finish();
+rollback;

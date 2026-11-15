@@ -1,0 +1,26 @@
+# Approved client review only. Creating/syncing this Blueprint starts a deployment.
+# Keep Blueprint Auto Sync disabled. No databases, disks, domains or mail services.
+services:
+  - type: web
+    name: indo-us-law-forum-review
+    runtime: node
+    plan: free
+    region: singapore
+    branch: master
+    autoDeployTrigger: 'off'
+    buildCommand: npm ci --include=dev && npm run build:review
+    startCommand: npm run start:review
+    healthCheckPath: /admin/login
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: NODE_ENV
+        value: production
+      - key: SITE_INDEXABLE
+        value: "false"
+      - key: VITE_DATA_MODE
+        value: supabase
+      - key: VITE_SUPABASE_URL
+        value: https://erwliwgbjlutczmtqoss.supabase.co
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        sync: false
